@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nelsyeung/usemin-cli#readme",
   "dependencies": {
-    "usemin": "git://github.com/ThomasHandwerker/usemin.git#v0.6.0",
+    "usemin": "git://github.com/ThomasHandwerker/usemin.git#v0.6.1",
     "yargs": "^6.6.0"
   },
   "eslintConfig": {
