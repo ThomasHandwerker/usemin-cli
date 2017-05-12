@@ -26,6 +26,11 @@ var argv = require('yargs')
 			describe: 'Remove livereload script',
 			type: 'boolean'
 		},
+		'nobundle': {
+			default: false,
+			describe: 'Do not bundle source files, just remove usemin block definitions',
+			type: 'boolean'
+		},
 		'noprocess': {
 			default: false,
 			describe: 'Do not process files, just replace references',
@@ -53,6 +58,7 @@ var html = usemin(argv._[0], argv.dest, {
 	output: argv.o,
 	configFile: argv.c,
 	htmlmin: argv.htmlmin,
+	nobundle: argv.nobundle,
 	noprocess: argv.noprocess,
 	removeLivereload: argv.removeLivereload,
 });
