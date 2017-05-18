@@ -26,6 +26,11 @@ var argv = require('yargs')
 			describe: 'Remove livereload script',
 			type: 'boolean'
 		},
+		'hash': {
+			default: false,
+			describe: 'Do append md5 hash value as suffix to javascript bundle files',
+			type: 'boolean'
+		},
 		'nobundle': {
 			default: false,
 			describe: 'Do not bundle source files, just remove usemin block definitions',
@@ -57,6 +62,7 @@ var usemin = require('usemin');
 var html = usemin(argv._[0], argv.dest, {
 	output: argv.o,
 	configFile: argv.c,
+	hash: argv.hash,
 	htmlmin: argv.htmlmin,
 	nobundle: argv.nobundle,
 	noprocess: argv.noprocess,
